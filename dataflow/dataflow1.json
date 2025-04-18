@@ -62,7 +62,7 @@
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> join1",
-				"join1 keyGenerate(output({Sales Person} as long),",
+				"join1 keyGenerate(output(Date as long),",
 				"     startAt: 1L,",
 				"     stepValue: 1L) ~> surrogateKey1",
 				"surrogateKey1 sink(allowSchemaDrift: true,",
