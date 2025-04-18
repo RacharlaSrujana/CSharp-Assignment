@@ -33,7 +33,7 @@
 					"name": "join1"
 				},
 				{
-					"name": "surrogateKey1"
+					"name": "aggregate1"
 				}
 			],
 			"scriptLines": [
@@ -62,10 +62,8 @@
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> join1",
-				"join1 keyGenerate(output(Date as long),",
-				"     startAt: 1L,",
-				"     stepValue: 1L) ~> surrogateKey1",
-				"surrogateKey1 sink(allowSchemaDrift: true,",
+				"join1 aggregate() ~> aggregate1",
+				"aggregate1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> sink1"
