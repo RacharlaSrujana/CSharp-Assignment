@@ -13,7 +13,7 @@
 				},
 				{
 					"dataset": {
-						"referenceName": "DelimitedText2",
+						"referenceName": "DelimitedText4",
 						"type": "DatasetReference"
 					},
 					"name": "source2"
@@ -21,6 +21,10 @@
 			],
 			"sinks": [
 				{
+					"dataset": {
+						"referenceName": "DelimitedText5",
+						"type": "DatasetReference"
+					},
 					"name": "sink1"
 				}
 			],
